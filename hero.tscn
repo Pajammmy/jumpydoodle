@@ -1,7 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://bxrqnsfw8pjy7"]
+[gd_scene load_steps=48 format=3 uid="uid://bxrqnsfw8pjy7"]
 
 [ext_resource type="Script" path="res://hero.gd" id="1_lyich"]
 [ext_resource type="Texture2D" uid="uid://e41atvvws23k" path="res://assets/catdog/cat/Fall (1).png" id="2_m6egw"]
+[ext_resource type="Texture2D" uid="uid://15ejrh2ohtmj" path="res://assets/arrow/whitearrow.png" id="3_7h4ch"]
 [ext_resource type="Texture2D" uid="uid://coonu1h1x0yc5" path="res://assets/catdog/cat/Fall (2).png" id="3_win3u"]
 [ext_resource type="Texture2D" uid="uid://1r5yyv1fdso3" path="res://assets/catdog/cat/Fall (3).png" id="4_m8kwr"]
 [ext_resource type="Texture2D" uid="uid://bplmy8anvn50m" path="res://assets/catdog/cat/Fall (4).png" id="5_vbdf6"]
@@ -39,6 +40,45 @@
 [ext_resource type="Texture2D" uid="uid://dol3yjpt4t2xb" path="res://assets/catdog/dog/Idle (8).png" id="35_u7dpu"]
 [ext_resource type="Texture2D" uid="uid://derepqsnwvjrf" path="res://assets/catdog/dog/Idle (9).png" id="36_q0bcb"]
 [ext_resource type="Texture2D" uid="uid://onn3wb35ij4d" path="res://assets/catdog/dog/Idle (10).png" id="37_6fo4t"]
+[ext_resource type="Texture2D" uid="uid://cl4c1qdtwxm4m" path="res://assets/arrow/arrow.png" id="40_7np17"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6srar"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_7np17")
+}],
+"loop": true,
+"name": &"arrow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7h4ch")
+}],
+"loop": true,
+"name": &"whitearrow",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfj6d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_7np17")
+}],
+"loop": true,
+"name": &"arrow",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7h4ch")
+}],
+"loop": true,
+"name": &"whitearrow",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_av4mw"]
 radius = 140.0
@@ -201,6 +241,19 @@ animations = [{
 scale = Vector2(0.3, 0.3)
 script = ExtResource("1_lyich")
 
+[node name="rightarrow" type="AnimatedSprite2D" parent="."]
+position = Vector2(270, -286.667)
+scale = Vector2(0.558893, 0.558893)
+sprite_frames = SubResource("SpriteFrames_6srar")
+animation = &"arrow"
+
+[node name="leftarrow" type="AnimatedSprite2D" parent="."]
+position = Vector2(-276.667, -283.333)
+rotation = 3.14159
+scale = Vector2(0.569638, 0.569638)
+sprite_frames = SubResource("SpriteFrames_lfj6d")
+animation = &"whitearrow"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_av4mw")
 
@@ -213,6 +266,7 @@ sprite_frames = SubResource("SpriteFrames_jdv31")
 animation = &"jump"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-250, -263.333)
 limit_left = 0
 limit_top = -4000
 limit_right = 1536
