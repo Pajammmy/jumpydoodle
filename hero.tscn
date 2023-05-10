@@ -1,0 +1,223 @@
+[gd_scene load_steps=44 format=3 uid="uid://bxrqnsfw8pjy7"]
+
+[ext_resource type="Script" path="res://hero.gd" id="1_lyich"]
+[ext_resource type="Texture2D" uid="uid://e41atvvws23k" path="res://assets/catdog/cat/Fall (1).png" id="2_m6egw"]
+[ext_resource type="Texture2D" uid="uid://coonu1h1x0yc5" path="res://assets/catdog/cat/Fall (2).png" id="3_win3u"]
+[ext_resource type="Texture2D" uid="uid://1r5yyv1fdso3" path="res://assets/catdog/cat/Fall (3).png" id="4_m8kwr"]
+[ext_resource type="Texture2D" uid="uid://bplmy8anvn50m" path="res://assets/catdog/cat/Fall (4).png" id="5_vbdf6"]
+[ext_resource type="Texture2D" uid="uid://rtg70f58kqyf" path="res://assets/catdog/cat/Fall (5).png" id="6_5j3dh"]
+[ext_resource type="Texture2D" uid="uid://dr1olbkmhmvi5" path="res://assets/catdog/cat/Fall (6).png" id="7_05ixy"]
+[ext_resource type="Texture2D" uid="uid://cg7xbs6hb62lr" path="res://assets/catdog/cat/Fall (7).png" id="8_bkat2"]
+[ext_resource type="Texture2D" uid="uid://cjwtpovhu06i2" path="res://assets/catdog/cat/Fall (8).png" id="9_6hwfh"]
+[ext_resource type="Texture2D" uid="uid://bn33g3rha66i0" path="res://assets/catdog/cat/Idle (1).png" id="10_3ku2i"]
+[ext_resource type="Texture2D" uid="uid://cl71k7ixf8nra" path="res://assets/catdog/cat/Idle (2).png" id="11_oylis"]
+[ext_resource type="Texture2D" uid="uid://dc07b08klwf1k" path="res://assets/catdog/cat/Idle (3).png" id="12_10xq2"]
+[ext_resource type="Texture2D" uid="uid://c73aod874enei" path="res://assets/catdog/dog/Jump (1).png" id="12_p4cyo"]
+[ext_resource type="Texture2D" uid="uid://kd6nypt3s8it" path="res://assets/catdog/dog/Jump (2).png" id="13_j77r1"]
+[ext_resource type="Texture2D" uid="uid://b2ujqu4ax1ja6" path="res://assets/catdog/cat/Idle (4).png" id="13_jy7a2"]
+[ext_resource type="Texture2D" uid="uid://240sae4mxlr" path="res://assets/catdog/cat/Idle (5).png" id="14_57e0b"]
+[ext_resource type="Texture2D" uid="uid://cvo051i6j30ue" path="res://assets/catdog/dog/Jump (3).png" id="14_svvyi"]
+[ext_resource type="Texture2D" uid="uid://b6oi84iw2npry" path="res://assets/catdog/cat/Idle (6).png" id="15_3avbh"]
+[ext_resource type="Texture2D" uid="uid://w5be6dt5xgd5" path="res://assets/catdog/dog/Jump (4).png" id="15_lna4m"]
+[ext_resource type="Texture2D" uid="uid://ew3pnn3vqltw" path="res://assets/catdog/dog/Jump (5).png" id="16_seqvg"]
+[ext_resource type="Texture2D" uid="uid://tawc08dsjxnh" path="res://assets/catdog/cat/Idle (7).png" id="16_xblqm"]
+[ext_resource type="Texture2D" uid="uid://x048i0sa664n" path="res://assets/catdog/cat/Idle (8).png" id="17_tdicd"]
+[ext_resource type="Texture2D" uid="uid://dw7hj42tgjfyp" path="res://assets/catdog/cat/Idle (9).png" id="18_lxcqc"]
+[ext_resource type="Texture2D" uid="uid://dmy6ag0jw066p" path="res://assets/catdog/cat/Idle (10).png" id="19_or253"]
+[ext_resource type="Texture2D" uid="uid://cduvs6bgckf53" path="res://assets/catdog/cat/Jump (1).png" id="20_wkui2"]
+[ext_resource type="Texture2D" uid="uid://ducix3u28ogcu" path="res://assets/catdog/cat/Jump (2).png" id="21_ppybs"]
+[ext_resource type="Texture2D" uid="uid://yv1dy6mx6w1r" path="res://assets/catdog/cat/Jump (3).png" id="22_5s4vw"]
+[ext_resource type="Texture2D" uid="uid://bqodbtxq0u1oa" path="res://assets/catdog/cat/Jump (4).png" id="23_epyej"]
+[ext_resource type="Texture2D" uid="uid://bxo41o8xgmf6" path="res://assets/catdog/cat/Jump (5).png" id="24_r18sx"]
+[ext_resource type="Texture2D" uid="uid://6laermy7yym6" path="res://assets/catdog/dog/Idle (1).png" id="28_rr8uh"]
+[ext_resource type="Texture2D" uid="uid://dnn317l7l60iw" path="res://assets/catdog/dog/Idle (2).png" id="29_xopc3"]
+[ext_resource type="Texture2D" uid="uid://m5f6fdvx0qkk" path="res://assets/catdog/dog/Idle (3).png" id="30_72qw2"]
+[ext_resource type="Texture2D" uid="uid://bhqgh6txlt61c" path="res://assets/catdog/dog/Idle (4).png" id="31_jp47f"]
+[ext_resource type="Texture2D" uid="uid://cpw1aidcv1wcm" path="res://assets/catdog/dog/Idle (5).png" id="32_gp0p7"]
+[ext_resource type="Texture2D" uid="uid://xj1phubldrdw" path="res://assets/catdog/dog/Idle (6).png" id="33_0ayn6"]
+[ext_resource type="Texture2D" uid="uid://b35db3f6i3xhj" path="res://assets/catdog/dog/Idle (7).png" id="34_lhxgd"]
+[ext_resource type="Texture2D" uid="uid://dol3yjpt4t2xb" path="res://assets/catdog/dog/Idle (8).png" id="35_u7dpu"]
+[ext_resource type="Texture2D" uid="uid://derepqsnwvjrf" path="res://assets/catdog/dog/Idle (9).png" id="36_q0bcb"]
+[ext_resource type="Texture2D" uid="uid://onn3wb35ij4d" path="res://assets/catdog/dog/Idle (10).png" id="37_6fo4t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_av4mw"]
+radius = 140.0
+height = 413.333
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_24v8w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_rr8uh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_xopc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_72qw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_jp47f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_gp0p7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_0ayn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_lhxgd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_u7dpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_q0bcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_6fo4t")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_p4cyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j77r1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_svvyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lna4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_seqvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j77r1")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdv31"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m6egw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_win3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m8kwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vbdf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5j3dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_05ixy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bkat2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6hwfh")
+}],
+"loop": false,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_3ku2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_oylis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_10xq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jy7a2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_57e0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_3avbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xblqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tdicd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lxcqc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_or253")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_wkui2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ppybs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5s4vw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_epyej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_r18sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ppybs")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 8.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_otm7h"]
+
+[node name="Hero" type="CharacterBody2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_lyich")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_av4mw")
+
+[node name="Dog" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_24v8w")
+animation = &"idle"
+
+[node name="Cat" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jdv31")
+animation = &"jump"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = -4000
+limit_right = 1536
+limit_bottom = 0
+script = SubResource("GDScript_otm7h")
+
+[connection signal="animation_finished" from="Dog" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="Cat" to="." method="_on_animation_finished"]
