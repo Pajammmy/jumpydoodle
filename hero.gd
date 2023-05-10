@@ -1,9 +1,10 @@
 extends CharacterBody2D
 @onready var global = get_node("/root/Global")
 
-const low_jump = Vector2(300,-1500)
-const medium_jump = Vector2(400,-2000)
-const high_jump = Vector2(500,-2500)
+const low_jump = Vector2(200,-1250)
+const medium_jump = Vector2(450,-1300)
+const high_jump = Vector2(600,-2000)
+const extrahigh_jump = Vector2(1000,-2200)
 
 enum State {
 	Idle,
@@ -54,6 +55,9 @@ func process_input():
 			set_state(State.Jump)
 		elif Input.is_action_just_pressed("high_jump"):
 			velocity = high_jump
+			set_state(State.Jump)
+		elif Input.is_action_just_pressed("extrahigh_jump"):
+			velocity = extrahigh_jump
 			set_state(State.Jump)
 		if facing_left and velocity.x > 0:
 			velocity.x = -velocity.x
