@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bewa5i51cyd8c"
-path="res://.godot/imported/snow_start.png-8b01575f0a6df4cff11f4a46880a2937.ctex"
+uid="uid://tb8sin6rixf3"
+path="res://.godot/imported/green_trampoline_green_spritesheet_256px_by_209px_per_frame.png-90f6b2a76c03bc7b1e522ba82e3a6c2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/snow/snow_start.png"
-dest_files=["res://.godot/imported/snow_start.png-8b01575f0a6df4cff11f4a46880a2937.ctex"]
+source_file="res://assets/spring/green/green_trampoline_green_spritesheet_256px_by_209px_per_frame.png"
+dest_files=["res://.godot/imported/green_trampoline_green_spritesheet_256px_by_209px_per_frame.png-90f6b2a76c03bc7b1e522ba82e3a6c2e.ctex"]
 
 [params]
 

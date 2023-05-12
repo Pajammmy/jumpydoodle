@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://d0g2kibvgj4k"]
+
+[ext_resource type="Texture2D" uid="uid://bk3qh0rh8qg4x" path="res://assets/snow/snow_bg2.png" id="1_qt55m"]
+[ext_resource type="Texture2D" uid="uid://cvp3sqqyxnali" path="res://assets/snow/snow_sides.png" id="2_5ep6s"]
+[ext_resource type="Script" path="res://clouds1.gd" id="2_ny81q"]
+[ext_resource type="Texture2D" uid="uid://bf2b5v6qgndny" path="res://assets/snow/snow_clouds1.png" id="3_m6tg7"]
+[ext_resource type="Texture2D" uid="uid://bewa5i51cyd8c" path="res://assets/snow/snow_start.png" id="3_o2jis"]
+[ext_resource type="Script" path="res://clouds2.gd" id="4_vplvf"]
+[ext_resource type="Texture2D" uid="uid://dmlv1fx7grfls" path="res://assets/snow/snow_clouds2.png" id="5_xmqb0"]
+
+[sub_resource type="GDScript" id="GDScript_bww0v"]
+script/source = "extends ParallaxLayer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10n2u"]
+size = Vector2(1551, 346)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kn65r"]
+size = Vector2(141, 4013)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4h23"]
+size = Vector2(145, 4000)
+
+[node name="SnowBackground" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_offset = Vector2(0, 500)
+script = SubResource("GDScript_bww0v")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Background"]
+texture = ExtResource("1_qt55m")
+centered = false
+offset = Vector2(0, -4000)
+
+[node name="Clouds1" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1, 0.5)
+motion_offset = Vector2(0, 500)
+motion_mirroring = Vector2(1536, 0)
+script = ExtResource("2_ny81q")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds1"]
+texture = ExtResource("3_m6tg7")
+centered = false
+offset = Vector2(0, -4000)
+
+[node name="Clouds2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(1, 0.5)
+motion_offset = Vector2(0, 500)
+script = ExtResource("4_vplvf")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Clouds2"]
+texture = ExtResource("5_xmqb0")
+centered = false
+offset = Vector2(0, -4000)
+
+[node name="Sides" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Start" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_5ep6s")
+centered = false
+offset = Vector2(0, -4000)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("3_o2jis")
+centered = false
+offset = Vector2(0, -4000)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(765.5, -163)
+shape = SubResource("RectangleShape2D_10n2u")
+debug_color = Color(0, 0.6, 0.701961, 0.411765)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(60.5, -1996.5)
+shape = SubResource("RectangleShape2D_kn65r")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1472, -2002)
+shape = SubResource("RectangleShape2D_h4h23")

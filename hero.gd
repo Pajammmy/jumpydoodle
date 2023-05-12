@@ -5,11 +5,14 @@ const low_jump = Vector2(200,-1250)
 const medium_jump = Vector2(450,-1300)
 const high_jump = Vector2(600,-2000)
 const extrahigh_jump = Vector2(1000,-2200)
+const fly_y = -3000.0
+const fly_x = 500.0
 
 enum State {
 	Idle,
 	Jump,
 	Fall,
+	Fly,
 }
 
 var state
@@ -26,11 +29,15 @@ func set_state(new_state):
 			hero.play("jump")
 		State.Fall:
 			hero.play("fall")
+		State.Fly:
+			hero.play("fall")
+			velocity.y = fly_y
 	state = new_state
 
 func _ready():
 	set_hero_type(global.hero_type)
-	set_state(State.Idle)
+	velocity = Vector2(100, 0)
+	set_state(State.Fall)
 
 func _physics_process(delta):
 	process_input()
@@ -45,6 +52,12 @@ func process_input():
 		facing_left = true
 	elif Input.is_action_just_pressed("face_right"):
 		facing_left = false
+	
+	if state == State.Fly:
+		if Input.is_action_pressed("face_left"):
+			velocity.x = lerp(velocity.x, -fly_x, .5)
+		elif Input.is_action_pressed("face_right"):
+			velocity.x = lerp(velocity.x, fly_x, .5)
 	
 	if state == State.Idle:
 		if Input.is_action_just_pressed("low_jump"):
@@ -80,3 +93,8 @@ func set_hero_type(type):
 		"dog":
 			hero = $Dog
 	hero.visible = true	
+
+func launch():
+	if state == State.Idle:
+		set_state(State.Fly)
+	

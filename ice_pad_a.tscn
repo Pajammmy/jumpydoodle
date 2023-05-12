@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d03vyw6jn2n40"]
+
+[ext_resource type="Texture2D" uid="uid://dxaiu2l64mawp" path="res://assets/Pads/Pad_03_1.png" id="1_4ckld"]
+
+[node name="IcePadA" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4ckld")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-395, -88, 411, -90, 431, -34, 350, 62, 287, 45, 173, 107, 60, 131, -71, 92, -136, 131, -233, 32, -260, 83, -321, 26, -348, 50, -427, -54)

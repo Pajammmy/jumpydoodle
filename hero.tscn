@@ -41,8 +41,8 @@
 [ext_resource type="Texture2D" uid="uid://onn3wb35ij4d" path="res://assets/catdog/dog/Idle (10).png" id="37_6fo4t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_av4mw"]
-radius = 140.0
-height = 413.333
+radius = 110.0
+height = 453.333
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_24v8w"]
 animations = [{
@@ -197,8 +197,11 @@ animations = [{
 
 [sub_resource type="GDScript" id="GDScript_otm7h"]
 
-[node name="Hero" type="CharacterBody2D"]
+[node name="Hero" type="CharacterBody2D" groups=["Hero"]]
+z_index = 1000
 scale = Vector2(0.3, 0.3)
+floor_stop_on_slope = false
+floor_max_angle = 0.523599
 script = ExtResource("1_lyich")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
