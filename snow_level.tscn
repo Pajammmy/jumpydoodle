@@ -54,9 +54,9 @@ position = Vector2(662, -2432)
 scale = Vector2(0.857502, 0.239995)
 
 [node name="IcePadA7" parent="." instance=ExtResource("5_gthtg")]
-position = Vector2(740, -2336)
-rotation = 0.234416
-scale = Vector2(0.755375, -0.0265634)
+position = Vector2(875, -2352)
+rotation = 1.5479
+scale = Vector2(0.194281, -0.0265634)
 
 [node name="IcePadA8" parent="." instance=ExtResource("5_gthtg")]
 position = Vector2(1324, -1986)
@@ -100,9 +100,9 @@ position = Vector2(-1633, -550)
 position = Vector2(-190, -2650)
 
 [node name="IcePadA16" parent="." instance=ExtResource("5_gthtg")]
-position = Vector2(1159, -2998)
-rotation = -0.500359
-scale = Vector2(0.491124, 0.116722)
+position = Vector2(974, -2864)
+rotation = -1.57439
+scale = Vector2(0.29171, 0.116722)
 
 [node name="IcePadA18" parent="." instance=ExtResource("5_gthtg")]
 position = Vector2(820, -2763)
