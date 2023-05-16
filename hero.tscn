@@ -245,12 +245,14 @@ floor_max_angle = 0.523599
 script = ExtResource("1_lyich")
 
 [node name="rightarrow" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(270, -286.667)
 scale = Vector2(0.558893, 0.558893)
 sprite_frames = SubResource("SpriteFrames_6srar")
 animation = &"arrow"
 
 [node name="leftarrow" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(-276.667, -283.333)
 rotation = 3.14159
 scale = Vector2(0.569638, 0.569638)

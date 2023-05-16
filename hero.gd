@@ -60,7 +60,9 @@ func process_input():
 			velocity.x = lerp(velocity.x, fly_x, .5)
 	
 	if state == State.Idle:
-		if Input.is_action_just_pressed("low_jump"):
+		if !is_on_floor():
+			set_state(State.Fall)
+		elif Input.is_action_just_pressed("low_jump"):
 			velocity = low_jump
 			set_state(State.Jump)
 		elif Input.is_action_just_pressed("medium_jump"):

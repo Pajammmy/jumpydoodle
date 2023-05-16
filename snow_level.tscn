@@ -1,10 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://biwfu7bv0npyj"]
+[gd_scene load_steps=9 format=3 uid="uid://tex6w3ogqeye"]
 
 [ext_resource type="Script" path="res://snow_level.gd" id="1_ft3kn"]
 [ext_resource type="PackedScene" uid="uid://bxrqnsfw8pjy7" path="res://hero.tscn" id="2_0yye6"]
-[ext_resource type="PackedScene" uid="uid://d0g2kibvgj4k" path="res://snow_background.tscn" id="3_qe3oi"]
-[ext_resource type="PackedScene" uid="uid://bk55n81k6p3jy" path="res://spring.tscn" id="4_orrb1"]
-[ext_resource type="PackedScene" uid="uid://d03vyw6jn2n40" path="res://ice_pad_a.tscn" id="5_gthtg"]
+[ext_resource type="PackedScene" path="res://snow_background.tscn" id="3_qe3oi"]
+[ext_resource type="PackedScene" uid="uid://caw1r8tcfw3ca" path="res://spring.tscn" id="4_orrb1"]
+[ext_resource type="PackedScene" path="res://ice_pad_a.tscn" id="5_gthtg"]
+
+[sub_resource type="FontVariation" id="FontVariation_xgarg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jkkb6"]
+font = SubResource("FontVariation_xgarg")
+font_size = 100
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_44mi5"]
+size = Vector2(477, 18.5)
 
 [node name="SnowLevel" type="Node2D"]
 script = ExtResource("1_ft3kn")
@@ -31,3 +40,106 @@ position = Vector2(363, -1157)
 [node name="IcePadA3" parent="." instance=ExtResource("5_gthtg")]
 position = Vector2(862, -1651)
 scale = Vector2(0.16, 0.160005)
+
+[node name="IcePadA4" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(326, -1568)
+scale = Vector2(-0.0415256, 0.234688)
+
+[node name="IcePadA5" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(488, -1440)
+scale = Vector2(0.0390319, 0.245263)
+
+[node name="IcePadA6" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(662, -2432)
+scale = Vector2(0.857502, 0.239995)
+
+[node name="IcePadA7" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(740, -2336)
+rotation = 0.234416
+scale = Vector2(0.755375, -0.0265634)
+
+[node name="IcePadA8" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(1324, -1986)
+scale = Vector2(-0.199998, 0.24)
+
+[node name="IcePadA9" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(639, -2052)
+scale = Vector2(0.156387, 0.290562)
+
+[node name="IcePadA10" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(219, -1867)
+scale = Vector2(0.123471, 0.200002)
+
+[node name="IcePadA22" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(1373, -2482)
+scale = Vector2(0.12574, 0.138937)
+
+[node name="IcePadA11" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(1102, -2272)
+scale = Vector2(0.0757649, 0.372743)
+
+[node name="IcePadA12" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(481, -2965)
+scale = Vector2(-0.127712, 0.228378)
+
+[node name="IcePadA13" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(159, -3159)
+scale = Vector2(0.206567, 0.14538)
+
+[node name="IcePadA14" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(586, -3033)
+scale = Vector2(0.0895304, 2.67164)
+
+[node name="IcePadA21" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(-2057, -1273)
+
+[node name="IcePadA17" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(-1633, -550)
+
+[node name="IcePadA20" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(-190, -2650)
+
+[node name="IcePadA16" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(1159, -2998)
+rotation = -0.500359
+scale = Vector2(0.491124, 0.116722)
+
+[node name="IcePadA18" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(820, -2763)
+scale = Vector2(-0.305375, 0.340545)
+
+[node name="IcePadA19" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(699, -3698)
+scale = Vector2(-0.548241, 0.118419)
+
+[node name="IcePadA15" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(1355, -3232)
+scale = Vector2(0.193937, 0.480002)
+
+[node name="IcePadA23" parent="." instance=ExtResource("5_gthtg")]
+position = Vector2(1373, -2482)
+scale = Vector2(0.12574, 0.138937)
+
+[node name="Spring" parent="." instance=ExtResource("4_orrb1")]
+position = Vector2(815, -2837)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 253.0
+offset_top = -3965.0
+offset_right = 1265.0
+offset_bottom = -3825.0
+scale = Vector2(1.01015, 3.15569)
+text = "You've won the Beta!
+"
+label_settings = SubResource("LabelSettings_jkkb6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(697, -3718.75)
+shape = SubResource("RectangleShape2D_44mi5")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
