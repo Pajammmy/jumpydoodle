@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://snow_level.gd" id="1_ft3kn"]
 [ext_resource type="PackedScene" uid="uid://bxrqnsfw8pjy7" path="res://hero.tscn" id="2_0yye6"]
-[ext_resource type="PackedScene" path="res://snow_background.tscn" id="3_qe3oi"]
+[ext_resource type="PackedScene" uid="uid://d0g2kibvgj4k" path="res://snow_background.tscn" id="3_qe3oi"]
 [ext_resource type="PackedScene" uid="uid://caw1r8tcfw3ca" path="res://spring.tscn" id="4_orrb1"]
-[ext_resource type="PackedScene" path="res://ice_pad_a.tscn" id="5_gthtg"]
+[ext_resource type="PackedScene" uid="uid://d03vyw6jn2n40" path="res://ice_pad_a.tscn" id="5_gthtg"]
 
 [sub_resource type="FontVariation" id="FontVariation_xgarg"]
 

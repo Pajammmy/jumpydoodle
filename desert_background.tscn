@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ctxtx3iqamk43"]
+[gd_scene load_steps=11 format=3 uid="uid://ctxtx3iqamk43"]
 
 [ext_resource type="Texture2D" uid="uid://blwe4os5f7c3h" path="res://assets/desert/desert_bg.png" id="1_fbn37"]
 [ext_resource type="Script" path="res://desert_clouds.gd" id="2_fkp10"]
@@ -7,6 +7,15 @@
 [ext_resource type="Script" path="res://clouds2.gd" id="3_sf46b"]
 [ext_resource type="Texture2D" uid="uid://dyasuydx4nkf8" path="res://assets/desert/desert_start.png" id="4_l01vx"]
 [ext_resource type="Texture2D" uid="uid://dmlv1fx7grfls" path="res://assets/snow/snow_clouds2.png" id="4_lbkjj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvx4c"]
+size = Vector2(1534, 319)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ohoio"]
+size = Vector2(159, 3999)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vxqj6"]
+size = Vector2(147, 3991)
 
 [node name="DesertBackground" type="Node2D"]
 
@@ -51,3 +60,17 @@ offset = Vector2(0, -4000)
 texture = ExtResource("4_l01vx")
 centered = false
 offset = Vector2(0, -4000)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(765, -149.5)
+shape = SubResource("RectangleShape2D_bvx4c")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(69.5, -2009.5)
+shape = SubResource("RectangleShape2D_ohoio")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1457.5, -2005.5)
+shape = SubResource("RectangleShape2D_vxqj6")

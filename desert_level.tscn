@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://oqnfpeffo887"]
+
+[ext_resource type="PackedScene" uid="uid://bxrqnsfw8pjy7" path="res://hero.tscn" id="1_osucs"]
+[ext_resource type="PackedScene" uid="uid://ctxtx3iqamk43" path="res://desert_background.tscn" id="2_p64a6"]
+
+[node name="desert_level" type="Node2D"]
+
+[node name="Hero" parent="." instance=ExtResource("1_osucs")]
+position = Vector2(737, -447)
+
+[node name="DesertBackground" parent="." instance=ExtResource("2_p64a6")]
