@@ -21,7 +21,7 @@ size = Vector2(1552, 318)
 
 [node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0.5)
-motion_offset = Vector2(0, 500)
+motion_offset = Vector2(0, 600)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Background"]
 texture = ExtResource("1_sfw60")
