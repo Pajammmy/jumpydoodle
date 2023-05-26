@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://jnobynmxb0i6"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_52300"]
+[ext_resource type="Script" path="res://time.gd" id="2_pu0mg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pquo6"]
+font_size = 32
+
+[node name="Main" type="Container"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_52300")
+
+[node name="Hud" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Control" type="Control" parent="Hud"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Hud/Control"]
+layout_mode = 2
+offset_right = 1536.0
+offset_bottom = 48.0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Hud/Control/MarginContainer"]
+layout_mode = 2
+
+[node name="Time" type="Label" parent="Hud/Control/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "00:00"
+label_settings = SubResource("LabelSettings_pquo6")
+horizontal_alignment = 2
+script = ExtResource("2_pu0mg")
