@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://jcgimn7cajf0"]
+
+[ext_resource type="Texture2D" uid="uid://gj8ksg5pbn2h" path="res://assets/Pads/Pad_04_1.png" id="1_50fyp"]
+
+[node name="desert_pad_a" type="StaticBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(433, -60, -428, -60, -322, 49, 0, 131, 318, 54)
+
+[node name="Pad041" type="Sprite2D" parent="."]
+position = Vector2(2, -1)
+texture = ExtResource("1_50fyp")

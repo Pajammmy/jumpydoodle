@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://oqnfpeffo887"]
+[gd_scene load_steps=6 format=3 uid="uid://oqnfpeffo887"]
 
 [ext_resource type="PackedScene" uid="uid://bxrqnsfw8pjy7" path="res://hero.tscn" id="1_osucs"]
 [ext_resource type="PackedScene" uid="uid://ctxtx3iqamk43" path="res://desert_background.tscn" id="2_p64a6"]
+[ext_resource type="PackedScene" uid="uid://jcgimn7cajf0" path="res://desert_pad_a.tscn" id="3_pqy5y"]
+[ext_resource type="PackedScene" uid="uid://caw1r8tcfw3ca" path="res://spring.tscn" id="4_vfx1b"]
+[ext_resource type="PackedScene" uid="uid://cojggbwwho40a" path="res://desert_pad_b.tscn" id="5_glufb"]
 
 [node name="desert_level" type="Node2D"]
 
@@ -9,3 +12,133 @@
 position = Vector2(737, -447)
 
 [node name="DesertBackground" parent="." instance=ExtResource("2_p64a6")]
+
+[node name="desert_pad_a" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a2" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a3" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a4" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a5" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a6" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a7" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a8" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a9" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a10" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a11" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a12" parent="." instance=ExtResource("3_pqy5y")]
+
+[node name="desert_pad_a13" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(974, -1629)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="desert_pad_a14" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(670, -1214)
+scale = Vector2(0.221377, 0.260687)
+
+[node name="desert_pad_a15" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(645, -590)
+scale = Vector2(0.258489, 0.330403)
+
+[node name="desert_pad_a17" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(1236, -882)
+scale = Vector2(-0.0552946, 0.104525)
+
+[node name="desert_pad_a18" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(801, -883)
+scale = Vector2(-0.0548485, 0.104525)
+
+[node name="desert_pad_a19" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(332, -647)
+scale = Vector2(-0.0409906, 0.104525)
+
+[node name="desert_pad_a20" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(1014, -882)
+scale = Vector2(-0.051717, 0.104525)
+
+[node name="Spring" parent="." instance=ExtResource("4_vfx1b")]
+position = Vector2(669, -1285)
+
+[node name="Node2D" parent="." instance=ExtResource("5_glufb")]
+position = Vector2(604, -1571)
+scale = Vector2(0.0664516, 0.303054)
+
+[node name="Node2D2" parent="." instance=ExtResource("5_glufb")]
+position = Vector2(640, -1824)
+scale = Vector2(0.0719729, 0.229061)
+
+[node name="Node2D3" parent="." instance=ExtResource("5_glufb")]
+position = Vector2(798, -1709)
+scale = Vector2(-0.0484264, 0.200266)
+
+[node name="desert_pad_a16" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(296, -1913)
+scale = Vector2(0.144164, 0.211423)
+
+[node name="desert_pad_a21" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(2, -2054)
+scale = Vector2(0.519264, 0.689554)
+
+[node name="desert_pad_a13" parent="desert_pad_a21" instance=ExtResource("3_pqy5y")]
+position = Vector2(2239.71, -382.855)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="desert_pad_a22" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(506, -2330)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="desert_pad_a23" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(929, -2390)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="desert_pad_a24" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(2239.71, -382.855)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="desert_pad_a25" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(2239.71, -382.855)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="desert_pad_a26" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(1065, -2141)
+scale = Vector2(0.179355, 0.211423)
+
+[node name="Spring2" parent="." instance=ExtResource("4_vfx1b")]
+position = Vector2(1061, -2203)
+
+[node name="desert_pad_a27" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(1314, -2841)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="desert_pad_a28" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(1023, -3063)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="desert_pad_a29" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(798, -3060)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="desert_pad_a31" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(438, -3563)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="desert_pad_a32" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(259, -2783)
+scale = Vector2(0.113675, 0.211423)
+
+[node name="Spring3" parent="." instance=ExtResource("4_vfx1b")]
+position = Vector2(258, -2837)
+scale = Vector2(0.587798, 0.794656)
+
+[node name="desert_pad_a33" parent="." instance=ExtResource("3_pqy5y")]
+position = Vector2(777, -3777)
+scale = Vector2(0.113675, 0.211423)
