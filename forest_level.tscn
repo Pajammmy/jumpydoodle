@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkmf1d701yq5p"]
+[gd_scene load_steps=8 format=3 uid="uid://bkmf1d701yq5p"]
 
 [ext_resource type="Script" path="res://forest_level.gd" id="1_n8aqn"]
 [ext_resource type="PackedScene" uid="uid://bxrqnsfw8pjy7" path="res://hero.tscn" id="1_s6nop"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dech6osww67c1" path="res://forest_pad_a.tscn" id="4_7ksdq"]
 [ext_resource type="PackedScene" uid="uid://caw1r8tcfw3ca" path="res://spring.tscn" id="5_1410v"]
 [ext_resource type="PackedScene" uid="uid://d03vyw6jn2n40" path="res://ice_pad_a.tscn" id="6_xa1y1"]
+[ext_resource type="PackedScene" uid="uid://cjsanrjp5awf7" path="res://portal.tscn" id="7_givmf"]
 
 [node name="forest_level" type="Node2D"]
 script = ExtResource("1_n8aqn")
@@ -15,31 +16,13 @@ position = Vector2(468, -501)
 
 [node name="ForestBackground" parent="." instance=ExtResource("2_xxc3n")]
 
-[node name="Node2D22" parent="ForestBackground" instance=ExtResource("4_7ksdq")]
-position = Vector2(594, -2956)
-scale = Vector2(0.0992914, 0.28)
-
 [node name="Node2D" parent="." instance=ExtResource("4_7ksdq")]
 position = Vector2(411, -837)
 scale = Vector2(0.234365, 0.471095)
 
-[node name="Node2D2" parent="." instance=ExtResource("4_7ksdq")]
-
-[node name="Node2D3" parent="." instance=ExtResource("4_7ksdq")]
-
-[node name="Node2D4" parent="." instance=ExtResource("4_7ksdq")]
-
-[node name="Node2D5" parent="." instance=ExtResource("4_7ksdq")]
-
-[node name="Node2D6" parent="." instance=ExtResource("4_7ksdq")]
-
-[node name="Node2D7" parent="." instance=ExtResource("4_7ksdq")]
-
-[node name="Node2D8" parent="." instance=ExtResource("4_7ksdq")]
-
-[node name="Node2D9" parent="." instance=ExtResource("4_7ksdq")]
-
-[node name="Node2D10" parent="." instance=ExtResource("4_7ksdq")]
+[node name="Node2D27" parent="." instance=ExtResource("4_7ksdq")]
+position = Vector2(594, -2956)
+scale = Vector2(0.0992914, 0.28)
 
 [node name="Node2D11" parent="." instance=ExtResource("4_7ksdq")]
 position = Vector2(361, -1767)
@@ -63,10 +46,6 @@ scale = Vector2(0.241834, 0.316926)
 
 [node name="Spring" parent="." instance=ExtResource("5_1410v")]
 position = Vector2(1013, -1089)
-
-[node name="IcePadA" parent="." instance=ExtResource("6_xa1y1")]
-
-[node name="IcePadA2" parent="." instance=ExtResource("6_xa1y1")]
 
 [node name="IcePadA3" parent="." instance=ExtResource("6_xa1y1")]
 position = Vector2(933, -1390)
@@ -154,3 +133,7 @@ scale = Vector2(0.0992914, 0.28)
 [node name="Node2D26" parent="." instance=ExtResource("4_7ksdq")]
 position = Vector2(1322, -3543)
 scale = Vector2(0.0992914, 0.28)
+
+[node name="Portal" parent="." instance=ExtResource("7_givmf")]
+position = Vector2(752, -3922)
+scale = Vector2(0.3, 0.3)

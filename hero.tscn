@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://bxrqnsfw8pjy7"]
+[gd_scene load_steps=55 format=3 uid="uid://bxrqnsfw8pjy7"]
 
 [ext_resource type="Script" path="res://hero.gd" id="1_lyich"]
 [ext_resource type="Texture2D" uid="uid://e41atvvws23k" path="res://assets/catdog/cat/Fall (1).png" id="2_m6egw"]
@@ -241,6 +241,102 @@ animations = [{
 
 [sub_resource type="GDScript" id="GDScript_otm7h"]
 
+[sub_resource type="Animation" id="Animation_x42to"]
+resource_name = "teleport"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:motion_mode")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.3, 0.3), Vector2(0.1, 0.1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 18.8496]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8q51j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3, 0.3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frhrw"]
+_data = {
+"RESET": SubResource("Animation_8q51j"),
+"teleport": SubResource("Animation_x42to")
+}
+
 [node name="Hero" type="CharacterBody2D" groups=["Hero"]]
 z_index = 1000
 scale = Vector2(0.3, 0.3)
@@ -280,6 +376,7 @@ limit_left = 0
 limit_top = -4000
 limit_right = 1536
 limit_bottom = 0
+position_smoothing_enabled = true
 script = SubResource("GDScript_otm7h")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -295,5 +392,11 @@ stream = ExtResource("44_u35nl")
 [node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("45_2o1ef")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_frhrw")
+}
+
 [connection signal="animation_finished" from="Dog" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="Cat" to="." method="_on_animation_finished"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

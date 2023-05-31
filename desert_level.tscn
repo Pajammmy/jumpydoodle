@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://oqnfpeffo887"]
+[gd_scene load_steps=7 format=3 uid="uid://oqnfpeffo887"]
 
 [ext_resource type="PackedScene" uid="uid://bxrqnsfw8pjy7" path="res://hero.tscn" id="1_osucs"]
 [ext_resource type="PackedScene" uid="uid://ctxtx3iqamk43" path="res://desert_background.tscn" id="2_p64a6"]
 [ext_resource type="PackedScene" uid="uid://jcgimn7cajf0" path="res://desert_pad_a.tscn" id="3_pqy5y"]
 [ext_resource type="PackedScene" uid="uid://caw1r8tcfw3ca" path="res://spring.tscn" id="4_vfx1b"]
 [ext_resource type="PackedScene" uid="uid://cojggbwwho40a" path="res://desert_pad_b.tscn" id="5_glufb"]
+[ext_resource type="PackedScene" uid="uid://cjsanrjp5awf7" path="res://portal.tscn" id="6_n2b51"]
 
 [node name="desert_level" type="Node2D"]
 
@@ -142,3 +143,8 @@ scale = Vector2(0.587798, 0.794656)
 [node name="desert_pad_a33" parent="." instance=ExtResource("3_pqy5y")]
 position = Vector2(777, -3777)
 scale = Vector2(0.113675, 0.211423)
+
+[node name="Portal" parent="." instance=ExtResource("6_n2b51")]
+position = Vector2(783, -3869)
+scale = Vector2(0.3, 0.3)
+color = "yellow"

@@ -7,17 +7,20 @@ const high_jump = Vector2(600,-2000)
 const extrahigh_jump = Vector2(1000,-2200)
 const fly_y = -3000.0
 const fly_x = 500.0
+const teleport_x = 20.0
 
 enum State {
 	Idle,
 	Jump,
 	Fall,
 	Fly,
+	Teleport,
 }
 
 var state
 var hero 
 var facing_left = false
+var portal
 
 func set_state(new_state):
 	hero.stop()
@@ -32,6 +35,10 @@ func set_state(new_state):
 		State.Fly:
 			hero.play("fall")
 			velocity.y = fly_y
+		State.Teleport:
+			hero.play("fall")
+			motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
+			$AnimationPlayer.play("teleport")
 	state = new_state
 
 func _ready():
@@ -42,9 +49,13 @@ func _ready():
 func _physics_process(delta):
 	process_input()
 	hero.flip_h = facing_left
-	velocity.y += global.gravity
+	if state == State.Teleport:
+		position.x = lerp(position.x, portal.position.x, .5)
+		velocity.y = 0
+	else:
+		velocity.y += global.gravity
 	move_and_slide()
-	if is_on_floor() and state != State.Idle:
+	if is_on_floor() and state != State.Idle and state != State.Teleport:
 		set_state(State.Idle)
 	
 func process_input():
@@ -81,14 +92,6 @@ func process_input():
 		if facing_left and velocity.x > 0:
 			velocity.x = -velocity.x
 			
-func _on_animation_finished():
-	match state:
-		State.Idle:
-			pass
-		State.Jump:
-			pass
-		State.Fall:
-			pass
 
 func set_hero_type(type):
 	$Cat.visible = false
@@ -104,3 +107,11 @@ func launch():
 	if state == State.Idle:
 		set_state(State.Fly)
 	
+func teleport(port):
+	if state != State.Teleport:
+		portal = port
+		set_state(State.Teleport)
+
+
+func _on_animation_player_animation_finished(_name):
+	get_node("/root/Main").next_scene()
