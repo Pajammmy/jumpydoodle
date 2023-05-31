@@ -22,10 +22,12 @@ func set_scene(new_scene):
 	scene = new_scene
 	count_time = false
 	fade.play("fade_out")
+	
 
 func _on_animation_player_animation_finished(name):
 	if name == "fade_out":
 		$Hud.visible = true
+		$AudioStreamPlayer.stop()
 		match scene:
 			Scene.None:
 				return
@@ -46,6 +48,7 @@ func _on_animation_player_animation_finished(name):
 	else:
 		if scene > Scene.Title and scene < Scene.End:
 			count_time = true
+			$AudioStreamPlayer.play(0)
 
 func next_scene():
 	if scene == Scene.End:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bxrqnsfw8pjy7"]
+[gd_scene load_steps=52 format=3 uid="uid://bxrqnsfw8pjy7"]
 
 [ext_resource type="Script" path="res://hero.gd" id="1_lyich"]
 [ext_resource type="Texture2D" uid="uid://e41atvvws23k" path="res://assets/catdog/cat/Fall (1).png" id="2_m6egw"]
@@ -41,6 +41,10 @@
 [ext_resource type="Texture2D" uid="uid://derepqsnwvjrf" path="res://assets/catdog/dog/Idle (9).png" id="36_q0bcb"]
 [ext_resource type="Texture2D" uid="uid://onn3wb35ij4d" path="res://assets/catdog/dog/Idle (10).png" id="37_6fo4t"]
 [ext_resource type="Texture2D" uid="uid://cl4c1qdtwxm4m" path="res://assets/arrow/arrow.png" id="40_7np17"]
+[ext_resource type="AudioStream" uid="uid://cyod5uu5f6xdg" path="res://assets/8_BIT_[50_SFX]_Jump_Free_Sound_Effects_N1_BY_jalastram/SFX_Jump_12.wav" id="42_sm8mf"]
+[ext_resource type="AudioStream" uid="uid://bxu4xiqfpfyfi" path="res://assets/8_BIT_[50_SFX]_Jump_Free_Sound_Effects_N1_BY_jalastram/SFX_Jump_07.wav" id="43_ftino"]
+[ext_resource type="AudioStream" uid="uid://clh4l5jwww3ud" path="res://assets/8_BIT_[50_SFX]_Jump_Free_Sound_Effects_N1_BY_jalastram/SFX_Jump_08.wav" id="44_u35nl"]
+[ext_resource type="AudioStream" uid="uid://brdblmk1fkeh7" path="res://assets/8_BIT_[50_SFX]_Jump_Free_Sound_Effects_N1_BY_jalastram/SFX_Jump_09.wav" id="45_2o1ef"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6srar"]
 animations = [{
@@ -277,6 +281,19 @@ limit_top = -4000
 limit_right = 1536
 limit_bottom = 0
 script = SubResource("GDScript_otm7h")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("42_sm8mf")
+pitch_scale = 0.65
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("43_ftino")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("44_u35nl")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("45_2o1ef")
 
 [connection signal="animation_finished" from="Dog" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="Cat" to="." method="_on_animation_finished"]

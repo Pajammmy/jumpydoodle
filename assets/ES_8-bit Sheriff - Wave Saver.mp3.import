@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cpnctk6wbm6pp"
+path="res://.godot/imported/ES_8-bit Sheriff - Wave Saver.mp3-d00cf5af0cc443aa8eb2f05d080cca2a.mp3str"
+
+[deps]
+
+source_file="res://assets/ES_8-bit Sheriff - Wave Saver.mp3"
+dest_files=["res://.godot/imported/ES_8-bit Sheriff - Wave Saver.mp3-d00cf5af0cc443aa8eb2f05d080cca2a.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=118.0
+beat_count=200
+bar_beats=4

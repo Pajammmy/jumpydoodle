@@ -1,20 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://brdv5f15c7l17"]
+[gd_scene load_steps=7 format=3 uid="uid://brdv5f15c7l17"]
 
 [ext_resource type="Script" path="res://end.gd" id="1_cyrlh"]
+[ext_resource type="FontFile" uid="uid://ya2tvuxi4ij6" path="res://assets/antiquity-print.ttf" id="2_3mo30"]
 [ext_resource type="Script" path="res://result.gd" id="2_kcms6"]
+[ext_resource type="FontFile" uid="uid://dmd1otvkhgye1" path="res://assets/monogram.ttf" id="3_jxgus"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2hqaa"]
-font_size = 70
-font_color = Color(1, 0.435294, 0, 1)
-outline_size = 2
-outline_color = Color(1, 0.745098, 0, 1)
+font = ExtResource("2_3mo30")
+font_size = 100
+font_color = Color(1, 1, 0, 1)
+outline_size = 10
 shadow_size = 2
 shadow_color = Color(0, 0, 0, 0.878431)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4ief6"]
 line_spacing = 0.0
-font_size = 32
-font_color = Color(1, 0.698039, 0, 1)
+font = ExtResource("3_jxgus")
+font_size = 40
 
 [node name="End" type="Control"]
 layout_mode = 3
@@ -40,7 +42,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "SUCCESS!"
+text = "Well Done!"
 label_settings = SubResource("LabelSettings_2hqaa")
 horizontal_alignment = 1
 vertical_alignment = 1

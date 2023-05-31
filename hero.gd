@@ -65,15 +65,19 @@ func process_input():
 		elif Input.is_action_just_pressed("low_jump"):
 			velocity = low_jump
 			set_state(State.Jump)
+			$AudioStreamPlayer4.play()
 		elif Input.is_action_just_pressed("medium_jump"):
 			velocity = medium_jump
 			set_state(State.Jump)
+			$AudioStreamPlayer.play()
 		elif Input.is_action_just_pressed("high_jump"):
 			velocity = high_jump
 			set_state(State.Jump)
+			$AudioStreamPlayer2.play()
 		elif Input.is_action_just_pressed("extrahigh_jump"):
 			velocity = extrahigh_jump
 			set_state(State.Jump)
+			$AudioStreamPlayer3.play()
 		if facing_left and velocity.x > 0:
 			velocity.x = -velocity.x
 			

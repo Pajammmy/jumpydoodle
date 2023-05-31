@@ -1,8 +1,10 @@
-[gd_scene load_steps=27 format=3 uid="uid://dh65wjtxjy4gr"]
+[gd_scene load_steps=28 format=3 uid="uid://dh65wjtxjy4gr"]
 
 [ext_resource type="Script" path="res://title.gd" id="1_kxbj0"]
+[ext_resource type="FontFile" uid="uid://ya2tvuxi4ij6" path="res://assets/antiquity-print.ttf" id="2_8m5o1"]
 [ext_resource type="Texture2D" uid="uid://bn33g3rha66i0" path="res://assets/catdog/cat/Idle (1).png" id="2_usnkb"]
 [ext_resource type="Texture2D" uid="uid://cl71k7ixf8nra" path="res://assets/catdog/cat/Idle (2).png" id="3_70dck"]
+[ext_resource type="FontFile" uid="uid://dmd1otvkhgye1" path="res://assets/monogram.ttf" id="3_x46tq"]
 [ext_resource type="Texture2D" uid="uid://dc07b08klwf1k" path="res://assets/catdog/cat/Idle (3).png" id="4_fl8uy"]
 [ext_resource type="Texture2D" uid="uid://b2ujqu4ax1ja6" path="res://assets/catdog/cat/Idle (4).png" id="5_j7ukb"]
 [ext_resource type="Texture2D" uid="uid://240sae4mxlr" path="res://assets/catdog/cat/Idle (5).png" id="6_pjcai"]
@@ -22,20 +24,17 @@
 [ext_resource type="Texture2D" uid="uid://derepqsnwvjrf" path="res://assets/catdog/dog/Idle (9).png" id="20_8ntxc"]
 [ext_resource type="Texture2D" uid="uid://onn3wb35ij4d" path="res://assets/catdog/dog/Idle (10).png" id="21_hmwiv"]
 
-[sub_resource type="SystemFont" id="SystemFont_of2r0"]
-
 [sub_resource type="LabelSettings" id="LabelSettings_xjgxm"]
-font = SubResource("SystemFont_of2r0")
-font_size = 72
-font_color = Color(1, 0.345098, 0, 1)
-outline_size = 4
-outline_color = Color(1, 1, 0, 1)
+font = ExtResource("2_8m5o1")
+font_size = 100
+font_color = Color(1, 1, 0, 1)
+outline_size = 10
 shadow_size = 4
 shadow_color = Color(0, 0, 0, 0.760784)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3vnhq"]
-font_size = 32
-font_color = Color(1, 0.737255, 0, 1)
+font = ExtResource("3_x46tq")
+font_size = 40
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_etdh5"]
 animations = [{
