@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://brdv5f15c7l17"]
+
+[ext_resource type="Script" path="res://end.gd" id="1_cyrlh"]
+[ext_resource type="Script" path="res://result.gd" id="2_kcms6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2hqaa"]
+font_size = 70
+font_color = Color(1, 0.435294, 0, 1)
+outline_size = 2
+outline_color = Color(1, 0.745098, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.878431)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ief6"]
+line_spacing = 0.0
+font_size = 32
+font_color = Color(1, 0.698039, 0, 1)
+
+[node name="End" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cyrlh")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "SUCCESS!"
+label_settings = SubResource("LabelSettings_2hqaa")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Result" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Your time was 00:00"
+label_settings = SubResource("LabelSettings_4ief6")
+horizontal_alignment = 1
+script = ExtResource("2_kcms6")
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Try Again"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
