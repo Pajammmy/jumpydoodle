@@ -39,6 +39,7 @@ func set_state(new_state):
 			hero.play("fall")
 			motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
 			$AnimationPlayer.play("teleport")
+			$AudioStreamPlayer5.play()
 	state = new_state
 
 func _ready():

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dech6osww67c1" path="res://forest_pad_a.tscn" id="4_7ksdq"]
 [ext_resource type="PackedScene" uid="uid://caw1r8tcfw3ca" path="res://spring.tscn" id="5_1410v"]
 [ext_resource type="PackedScene" uid="uid://d03vyw6jn2n40" path="res://ice_pad_a.tscn" id="6_xa1y1"]
-[ext_resource type="PackedScene" uid="uid://cjsanrjp5awf7" path="res://portal.tscn" id="7_givmf"]
+[ext_resource type="PackedScene" uid="uid://cvl7a6dk3xlpu" path="res://portal.tscn" id="7_givmf"]
 
 [node name="forest_level" type="Node2D"]
 script = ExtResource("1_n8aqn")
@@ -21,7 +21,7 @@ position = Vector2(411, -837)
 scale = Vector2(0.234365, 0.471095)
 
 [node name="Node2D27" parent="." instance=ExtResource("4_7ksdq")]
-position = Vector2(594, -2956)
+position = Vector2(681, -2934)
 scale = Vector2(0.0992914, 0.28)
 
 [node name="Node2D11" parent="." instance=ExtResource("4_7ksdq")]
@@ -92,23 +92,23 @@ position = Vector2(871, -2772)
 scale = Vector2(-0.136644, -0.0310637)
 
 [node name="IcePadA8" parent="." instance=ExtResource("6_xa1y1")]
-position = Vector2(731, -2773)
-scale = Vector2(0.169999, -0.0400025)
+position = Vector2(705, -2775)
+scale = Vector2(0.250001, -0.0400025)
 
 [node name="IcePadA9" parent="." instance=ExtResource("6_xa1y1")]
-position = Vector2(572, -2774)
-scale = Vector2(-0.197188, -0.0418974)
+position = Vector2(535, -2776)
+scale = Vector2(-0.23048, -0.0418974)
 
 [node name="IcePadA10" parent="." instance=ExtResource("6_xa1y1")]
-position = Vector2(480, -2893)
+position = Vector2(437, -2893)
 scale = Vector2(0.01, 0.919988)
 
 [node name="Node2D21" parent="." instance=ExtResource("4_7ksdq")]
-position = Vector2(1260, -2726)
+position = Vector2(1313, -2645)
 scale = Vector2(0.0992914, 0.28)
 
 [node name="Node2D22" parent="." instance=ExtResource("4_7ksdq")]
-position = Vector2(759, -3837)
+position = Vector2(907, -3871)
 scale = Vector2(0.0992914, 0.28)
 
 [node name="IcePadA11" parent="." instance=ExtResource("6_xa1y1")]
@@ -123,17 +123,17 @@ scale = Vector2(0.179291, 0.28)
 position = Vector2(285, -3114)
 
 [node name="Node2D24" parent="." instance=ExtResource("4_7ksdq")]
-position = Vector2(769, -3586)
+position = Vector2(787, -3531)
 scale = Vector2(0.179291, 0.28)
 
 [node name="Node2D25" parent="." instance=ExtResource("4_7ksdq")]
-position = Vector2(1024, -3449)
+position = Vector2(932, -3421)
 scale = Vector2(0.0992914, 0.28)
 
 [node name="Node2D26" parent="." instance=ExtResource("4_7ksdq")]
-position = Vector2(1322, -3543)
+position = Vector2(1323, -3535)
 scale = Vector2(0.0992914, 0.28)
 
 [node name="Portal" parent="." instance=ExtResource("7_givmf")]
-position = Vector2(752, -3922)
+position = Vector2(905, -3975)
 scale = Vector2(0.3, 0.3)

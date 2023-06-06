@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://bxrqnsfw8pjy7"]
+[gd_scene load_steps=56 format=3 uid="uid://bxrqnsfw8pjy7"]
 
 [ext_resource type="Script" path="res://hero.gd" id="1_lyich"]
 [ext_resource type="Texture2D" uid="uid://e41atvvws23k" path="res://assets/catdog/cat/Fall (1).png" id="2_m6egw"]
@@ -45,6 +45,7 @@
 [ext_resource type="AudioStream" uid="uid://bxu4xiqfpfyfi" path="res://assets/8_BIT_[50_SFX]_Jump_Free_Sound_Effects_N1_BY_jalastram/SFX_Jump_07.wav" id="43_ftino"]
 [ext_resource type="AudioStream" uid="uid://clh4l5jwww3ud" path="res://assets/8_BIT_[50_SFX]_Jump_Free_Sound_Effects_N1_BY_jalastram/SFX_Jump_08.wav" id="44_u35nl"]
 [ext_resource type="AudioStream" uid="uid://brdblmk1fkeh7" path="res://assets/8_BIT_[50_SFX]_Jump_Free_Sound_Effects_N1_BY_jalastram/SFX_Jump_09.wav" id="45_2o1ef"]
+[ext_resource type="AudioStream" uid="uid://cvhqlmvhlubqd" path="res://assets/blackhole.mp3" id="46_pri7g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6srar"]
 animations = [{
@@ -241,6 +242,45 @@ animations = [{
 
 [sub_resource type="GDScript" id="GDScript_otm7h"]
 
+[sub_resource type="Animation" id="Animation_8q51j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.3, 0.3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_x42to"]
 resource_name = "teleport"
 tracks/0/type = "value"
@@ -290,45 +330,6 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_8q51j"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.3, 0.3)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_frhrw"]
@@ -396,6 +397,10 @@ stream = ExtResource("45_2o1ef")
 libraries = {
 "": SubResource("AnimationLibrary_frhrw")
 }
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("46_pri7g")
+volume_db = -11.044
 
 [connection signal="animation_finished" from="Dog" to="." method="_on_animation_finished"]
 [connection signal="animation_finished" from="Cat" to="." method="_on_animation_finished"]

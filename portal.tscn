@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://cjsanrjp5awf7"]
+[gd_scene load_steps=79 format=3 uid="uid://cvl7a6dk3xlpu"]
 
 [ext_resource type="Script" path="res://portal.gd" id="1_5nybo"]
 [ext_resource type="Texture2D" uid="uid://bjece1ro282ga" path="res://assets/Portals/frames/blue/__blue_portal_effect_large_000.png" id="2_gwmd8"]
@@ -308,6 +308,21 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="Animation" id="Animation_pysnh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Animation:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.1, 1.1)]
+}
+
 [sub_resource type="Animation" id="Animation_72s14"]
 resource_name = "pulse"
 length = 2.0
@@ -323,21 +338,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_pysnh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Animation:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1.1, 1.1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o8wwv"]
